@@ -37,3 +37,6 @@ WHERE DistanceFromSouthern <= 5
 EMIT CHANGES;
 ```
 
+### Stress Test Kafka
+You can run index.js with the "stress" argument. This will attempt to send 1000 events/second to the specified kafka topic. It generates random coordinates for each request. IF you run the push query above, but also increase the radius, you will see locations populate which have been randomly generated.
+
